@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
-        <table>
-            <thead>
-                <tr>
+            <div class="btn btn-primary float-end my-4">Add Student</div>
+        <table class="table table-bordered table-striped mt-5">
+            <thead class="table-primary">
+                <tr class="text-center">
                     <th>Sr.No</th>
                     <th>Name</th>
                     <th>Age</th>
@@ -12,10 +12,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
+                <tr *ngFor="let item of studentStatuses.studentList; let i= index" class="text-center">
+                    <td>{{i+1}}</td>
+                    <td>{{item.fName}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.course}}</td>
+                    <td>{{item.email}}</td>
+                    <td>
+                        <i class="bi bi-eye-fill pe-2"></i>
+                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-trash3-fill ps-2"></i>
+                    </td>
+                    
                 </tr>
             </tbody>
         </table>
-    </div>
 </div>
