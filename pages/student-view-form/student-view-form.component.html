@@ -1,1 +1,28 @@
-<p>student-view-form works!</p>
+<div class="container mt-5">
+     <div class="btn btn-primary float-end" (click)="backTolist()">BackTo List</div>
+    <div class="row mt-5">
+        <h3>View Student Form</h3>
+        <hr>
+       
+        <!-- <div class="col-3 flex-column">
+            <label for="">Id</label>
+            <p><b>{{studentstatus.id}}</b></p>
+        </div> -->
+        <div class="col-3 flex-column">
+            <label for="">Fname</label>
+            <p><b>{{studentstatus.fName}}</b></p>
+        </div>
+         <div class="col-3 flex-column">
+            <label for="">Age</label>
+            <p><b>{{studentstatus.age}}</b></p>
+        </div>
+        <div class="col-3 flex-column">
+            <label for="">Course</label>
+            <p><b>{{studentstatus.course}}</b></p>
+        </div>
+        <div class="col-3 flex-column">
+            <label for="">Email</label>
+            <p><b>{{studentstatus.email}}</b></p>
+        </div>
+    </div>
+</div>

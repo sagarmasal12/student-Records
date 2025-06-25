@@ -17,7 +17,7 @@ export const routes: Routes = [
         component:StudentAddComponent
     },
     {
-        path:'student-viewForm',
+        path:'student-viewForm/:id',
         component:StudentViewFormComponent
     }
 ];
