@@ -24,4 +24,22 @@ export class StudentServiceService {
     // {id:13, fName:"Shubham",age: 'Mane' ,course: 'React developer',email:''},
     // {id:14, fName:"Satyam",age: 'Mane' ,course: 'Python developer',email:''}
   ]
+
+  updatestudent(id:number,obj:studentStaus){
+    this.studentList = this.studentList.map((studentupdateid)=>{
+      if(studentupdateid.id ===id){
+        obj['id']=id;
+        return obj
+      } 
+      return studentupdateid
+    })
+  }
+  addStudent(obj:studentStaus){
+    obj['id']=this.studentList.length+1;
+    this.studentList.push(obj)
+  }
+  deletedRecordser(id:number){
+    this.studentList = this.studentList.filter(x => x.id !== id)
+    console.log(this.studentList)
+  }
 }

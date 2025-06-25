@@ -1,1 +1,29 @@
-<p>student-edit works!</p>
+<div class="container mt-5">
+    <div class="btn btn-primary float-end mb-5" (click)="backTolist()">BackTo List</div>
+    <form class="mb-3" [formGroup]="myform" (ngSubmit)="onSubmit()">
+        <div class="row mt-5">
+            <!-- <h4 id="displayOnEdit">{{editId?'Edit':'Add'}} Water Tax User</h4> -->
+            <div class="col-3 mb-2 flex-column d-flex">
+                <label>FirstName</label>
+                <input class="form-control" type="text"   formControlName="fName" />
+            </div>
+            <div class="col-3 flex-column d-flex">
+                <label>Student Age</label>
+                <input class="form-control"  type="text" formControlName="age"/>
+            </div>
+            <div class="col-3 flex-column d-flex">
+                <label>Course</label>
+                <input class="form-control"  type="text"  formControlName="course"/>
+            </div>
+             <div class="col-3 flex-column d-flex">
+                <label>Email</label>
+                <input class="form-control"  type="text" formControlName="email"/>
+            </div>
+           
+        </div>
+        <div class="d-flex">
+            <button type="submit" class="btn btn-success  me-5 mt-3">{{editId !== null? "Update":"Add"}}</button>
+             <button type="button" class="btn btn-secondary mt-3" (click)="resetForm()">Reset</button>
+        </div>
+    </form>
+</div>

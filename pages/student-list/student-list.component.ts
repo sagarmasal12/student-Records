@@ -13,6 +13,8 @@ export class StudentListComponent  implements OnInit{
 
   studentList:any[]=[];
 
+  filteredUser:any[]=[]
+
   router = inject(Router)
 
   ngOnInit(): void {
@@ -27,6 +29,19 @@ export class StudentListComponent  implements OnInit{
   viewStudents(id:number){
     this.router.navigateByUrl(`/student-viewForm/${id}`)
   }
+  editstudent(id:number){
+    this.router.navigateByUrl(`student-edit/${id}`)
+  }
+
+  deleteRecord(id:number){
+    const confirmed = confirm('are you sure want to delete this user?')
+    if(confirmed){
+      this.studentServ.deletedRecordser(id);
+      this.filteredUser = this.studentServ.studentList
+      console.log("record deleted")
+    }
+  }
+
 
   
 
