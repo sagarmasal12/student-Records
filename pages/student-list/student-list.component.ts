@@ -22,7 +22,7 @@ export class StudentListComponent  implements OnInit{
     
     
   }
-  constructor(private studentServ:StudentServiceService){
+  constructor(public studentServ:StudentServiceService){
     console.log('constructor called')
   }
 
@@ -42,8 +42,6 @@ export class StudentListComponent  implements OnInit{
     }
   }
 
-
-  
 
   get studentStatuses(){
     return this.studentServ
